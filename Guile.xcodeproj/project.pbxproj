@@ -21,6 +21,16 @@
 		358BAC4A17413E7300392F2C /* StatusMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 358BAC4817413E7300392F2C /* StatusMessageManager.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		35F419B9174BF75C0054B11E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35234C0A1741EEB200D5273B /* GuileDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3542D5E01741838B00A3DCC9;
+			remoteInfo = GuileDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3514EC6A173C863E003D5FB5 /* Guile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = Guile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3514EC6D173C863E003D5FB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,7 +45,7 @@
 		3514ECA0173CB791003D5FB5 /* UIApplication+StatusMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+StatusMessage.h"; sourceTree = "<group>"; };
 		3514ECA1173CB791003D5FB5 /* UIApplication+StatusMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+StatusMessage.m"; sourceTree = "<group>"; };
 		3514ECB5173CBB5F003D5FB5 /* LoadableCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadableCategory.h; sourceTree = "<group>"; };
-		35234C0A1741EEB200D5273B /* GuileDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = file; name = GuileDemo.xcodeproj; path = GuileDemo/GuileDemo.xcodeproj; sourceTree = "<group>"; };
+		35234C0A1741EEB200D5273B /* GuileDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GuileDemo.xcodeproj; path = GuileDemo/GuileDemo.xcodeproj; sourceTree = "<group>"; };
 		358BAC4717413E7300392F2C /* StatusMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusMessageManager.h; sourceTree = "<group>"; };
 		358BAC4817413E7300392F2C /* StatusMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusMessageManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +126,14 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		35F419B6174BF75C0054B11E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35F419BA174BF75C0054B11E /* GuileDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -173,12 +191,28 @@
 			mainGroup = 3514EC5D173C863E003D5FB5;
 			productRefGroup = 3514EC6B173C863E003D5FB5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 35F419B6174BF75C0054B11E /* Products */;
+					ProjectRef = 35234C0A1741EEB200D5273B /* GuileDemo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3514EC69173C863E003D5FB5 /* Guile */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		35F419BA174BF75C0054B11E /* GuileDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = GuileDemo.app;
+			remoteRef = 35F419B9174BF75C0054B11E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3514EC66173C863E003D5FB5 /* Resources */ = {

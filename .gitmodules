@@ -1,0 +1,3 @@
+[submodule "iOS-Universal-Framework"]
+	path = iOS-Universal-Framework
+	url = https://github.com/kstenerud/iOS-Universal-Framework.git
