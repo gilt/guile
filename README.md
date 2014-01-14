@@ -3,11 +3,17 @@ Guile, The Gilt User Interface Librarye
 
 A collection of iOS components from the team at Gilt Mobile. This project is young; more details and functionality will be added soon.
 
-## Components
+## iOS Components
 
-- Status bar message area!
-- Autocompleting text field!
-- More coming soon!
+### Status bar message area!
+
+
+### Autocompleting Text Field!
+Built on top of UITextField, with support for arbitrary suggestions.
+
+![image](http://adkap.com/guile-images/autosuggest.gif)
+### More coming soon!
+The project is an ongoing effort.
 
 ## Demo App
 
