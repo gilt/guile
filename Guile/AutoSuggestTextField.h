@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@protocol AutosuggestTextFieldDelegate <NSObject>
+@protocol AutoSuggestTextFieldDelegate <NSObject>
 
 - (NSString *)suggestedStringForInputString:(NSString *)input;
 
@@ -17,7 +17,7 @@
 
 @interface AutoSuggestTextField : UITextField
 
-@property (nonatomic, assign) id<AutosuggestTextFieldDelegate> suggestionDelegate;
+@property (nonatomic, assign) id<AutoSuggestTextFieldDelegate> suggestionDelegate;
 @property (nonatomic) UIColor *suggestColor;
 
 @end

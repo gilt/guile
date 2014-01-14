@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Guile/AutoSuggestTextField.h>
 
-@interface AutoCompleteViewController : UIViewController <AutosuggestTextFieldDelegate>
+@interface AutoCompleteViewController : UIViewController <AutoSuggestTextFieldDelegate>
 
 @property (nonatomic) IBOutlet AutoSuggestTextField *textField;
 
