@@ -37,6 +37,21 @@
     return YES;
 }
 
+#pragma mark - AutoSuggestDelegate Methods
+
+- (NSDictionary *)suggestedTextAttributes {
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            [UIColor purpleColor], NSBackgroundColorAttributeName,
+            [UIColor whiteColor], NSForegroundColorAttributeName,
+            @.75, NSObliquenessAttributeName,
+            [UIFont fontWithName:@"Chalkduster" size:13], NSFontAttributeName,
+            nil];
+}
+
+- (UIColor *)suggestedTextColor {
+    return [UIColor blueColor];
+}
+
 - (NSString *)suggestedStringForInputString:(NSString *)input {
     NSArray *parts = [input componentsSeparatedByString:@"@"];
     NSString *suggestion = nil;

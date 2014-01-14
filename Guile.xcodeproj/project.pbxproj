@@ -22,6 +22,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		352A43101885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 352A430E1885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		352A43111885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 352A430F1885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.m */; };
+		352A43131885AA45008D4E29 /* AutoSuggestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 352A43121885AA45008D4E29 /* AutoSuggestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		355F877C1884886A0058BA53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F877B1884886A0058BA53 /* Foundation.framework */; };
 		355F87811884886A0058BA53 /* Guile.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 355F87801884886A0058BA53 /* Guile.h */; };
 		355F87A21884899A0058BA53 /* Guile.h in Headers */ = {isa = PBXBuildFile; fileRef = 355F87801884886A0058BA53 /* Guile.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,6 +65,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		352A430E1885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+AutoSuggestAdditions.h"; sourceTree = "<group>"; };
+		352A430F1885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AutoSuggestAdditions.m"; sourceTree = "<group>"; };
+		352A43121885AA45008D4E29 /* AutoSuggestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSuggestDelegate.h; sourceTree = "<group>"; };
 		355F87781884886A0058BA53 /* libGuile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGuile.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		355F877B1884886A0058BA53 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		355F877F1884886A0058BA53 /* Guile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guile-Prefix.pch"; sourceTree = "<group>"; };
@@ -124,6 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				355F87801884886A0058BA53 /* Guile.h */,
+				352A43121885AA45008D4E29 /* AutoSuggestDelegate.h */,
+				352A430E1885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.h */,
+				352A430F1885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.m */,
 				355F87AB188493340058BA53 /* AutoSuggestTextField.h */,
 				355F87AC188493340058BA53 /* AutoSuggestTextField.m */,
 				355F87AD188493340058BA53 /* LoadableCategory.h */,
@@ -154,9 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				355F87B4188493340058BA53 /* AutoSuggestTextField.h in Headers */,
+				352A43131885AA45008D4E29 /* AutoSuggestDelegate.h in Headers */,
 				355F87A21884899A0058BA53 /* Guile.h in Headers */,
 				355F87B9188493340058BA53 /* StatusMessageManager.h in Headers */,
 				355F87B7188493340058BA53 /* StatusMessageLabel.h in Headers */,
+				352A43101885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.h in Headers */,
 				355F87B6188493340058BA53 /* LoadableCategory.h in Headers */,
 				355F87BB188493340058BA53 /* UIApplication+StatusMessage.h in Headers */,
 			);
@@ -245,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352A43111885A9EC008D4E29 /* UITextField+AutoSuggestAdditions.m in Sources */,
 				355F87BA188493340058BA53 /* StatusMessageManager.m in Sources */,
 				355F87B8188493340058BA53 /* StatusMessageLabel.m in Sources */,
 				355F87BC188493340058BA53 /* UIApplication+StatusMessage.m in Sources */,
