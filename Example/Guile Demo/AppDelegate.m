@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  GuileDemo
+//  Guile Demo
 //
-//  Created by Adam Kaplan on 5/13/13.
-//  Copyright (c) 2013 Gilt Groupe. All rights reserved.
+//  Created by Adam Kaplan on 1/13/14.
+//  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
 #import "AppDelegate.h"

@@ -26,8 +26,8 @@
         proxy = [[StatusMessageLabel alloc] initWithFrame:CGRectZero];
         proxy.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
         proxy.font = [UIFont systemFontOfSize:12.5];
-        proxy.textAlignment = UITextAlignmentCenter;
-        proxy.lineBreakMode = UILineBreakModeTailTruncation;
+        proxy.textAlignment = NSTextAlignmentCenter;
+        proxy.lineBreakMode = NSLineBreakByTruncatingTail;
     });
     return proxy;
 }
@@ -59,7 +59,7 @@
 }
 
 - (void)setBorderColor:(UIColor *)color {
-    /*if (!isInitializing)*/ super.borderColor = color;
+    /*if (!isInitializing)*/ [[super layer] setBorderColor:[color CGColor]];
 }
 
 - (void)setTextColor:(UIColor *)color {

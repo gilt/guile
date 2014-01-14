@@ -5,7 +5,8 @@ A collection of iOS components from the team at Gilt Mobile. This project is yo
 
 ## Components
 
-- Status bar message area
+- Status bar message area!
+- Autocompleting text field!
 - More coming soon!
 
 ## Demo App
@@ -30,19 +31,13 @@ A few Apple frameworks are needed to use Guile. They're probably already part of
 - UIKit
 - QuartzCore
 
-## Building the framework
-
-To build Guile as a framework, you need to first install the IOS-Universal-Framework XCode templates. This can be done automatically by executing `./setup-xcode.sh`.
-
-The `setup-xcode.sh` script will clone the IOS-Universal-Framework repository as a submodule, and execute it's installer.
-
 ## Follow Us
 
 Check out the [Gilt Tech Blog](http://tech.gilt.com) to see what we're up to. Have questions? email us at mobile at gilt.com.
 
 ## License
 
-Copyright 2013 Gilt Groupe, Inc.
+Copyright 2014 Gilt Groupe, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

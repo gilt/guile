@@ -104,17 +104,17 @@ static const CGFloat CornerRadius = 5.0; //pixels
         // Finally, the label
         CGRect labelRect = CGRectOffset(container.bounds, 0, container.bounds.size.height);
         label = [[StatusMessageLabel alloc] initWithFrame:labelRect];
-        label.textAlignment = UITextAlignmentCenter;
+        label.textAlignment = NSTextAlignmentCenter;
         label.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
         label.font = [UIFont systemFontOfSize:12.5];
-        label.lineBreakMode = UILineBreakModeTailTruncation;
+        label.lineBreakMode = NSLineBreakByTruncatingTail;
 
         [roundedCornerView addSubview:label];
     }
     return self;
 }
 
-- (int)defaultAnimationDuration {
+- (NSInteger)defaultAnimationDuration {
     return AnimationDuration;
 }
 

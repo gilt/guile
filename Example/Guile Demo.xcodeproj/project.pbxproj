@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		355F87CE188495B50058BA53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F87CD188495B50058BA53 /* Foundation.framework */; };
+		355F87D0188495B50058BA53 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F87CF188495B50058BA53 /* CoreGraphics.framework */; };
+		355F87D2188495B50058BA53 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F87D1188495B50058BA53 /* UIKit.framework */; };
+		355F87D8188495B50058BA53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355F87D6188495B50058BA53 /* InfoPlist.strings */; };
+		355F87DA188495B50058BA53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 355F87D9188495B50058BA53 /* main.m */; };
+		355F87DE188495B50058BA53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 355F87DD188495B50058BA53 /* AppDelegate.m */; };
+		355F881C188496B70058BA53 /* StatusBarMessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355F881B188496B70058BA53 /* StatusBarMessagingViewController.m */; };
+		355F8821188497180058BA53 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F8820188497180058BA53 /* QuartzCore.framework */; };
+		355F88221884981E0058BA53 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355F87DF188495B50058BA53 /* Main_iPhone.storyboard */; };
+		355F8823188498200058BA53 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355F87E2188495B50058BA53 /* Main_iPad.storyboard */; };
+		355F882518849C4A0058BA53 /* libGuile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F8816188496520058BA53 /* libGuile.a */; };
+		355F882818849CD70058BA53 /* AutoCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355F882718849CD70058BA53 /* AutoCompleteViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		355F8815188496520058BA53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 355F8810188496520058BA53 /* Guile.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 355F87781884886A0058BA53;
+			remoteInfo = Guile;
+		};
+		355F881E188496FC0058BA53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 355F8810188496520058BA53 /* Guile.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 355F87771884886A0058BA53;
+			remoteInfo = Guile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		355F87CA188495B50058BA53 /* Guile Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guile Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		355F87CD188495B50058BA53 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		355F87CF188495B50058BA53 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		355F87D1188495B50058BA53 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		355F87D5188495B50058BA53 /* Guile Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Guile Demo-Info.plist"; sourceTree = "<group>"; };
+		355F87D7188495B50058BA53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		355F87D9188495B50058BA53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		355F87DB188495B50058BA53 /* Guile Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guile Demo-Prefix.pch"; sourceTree = "<group>"; };
+		355F87DC188495B50058BA53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		355F87DD188495B50058BA53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		355F87E0188495B50058BA53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		355F87E3188495B50058BA53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		355F8810188496520058BA53 /* Guile.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Guile.xcodeproj; path = ../Guile.xcodeproj; sourceTree = "<group>"; };
+		355F881A188496B70058BA53 /* StatusBarMessagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarMessagingViewController.h; sourceTree = "<group>"; };
+		355F881B188496B70058BA53 /* StatusBarMessagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarMessagingViewController.m; sourceTree = "<group>"; };
+		355F8820188497180058BA53 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		355F882618849CD70058BA53 /* AutoCompleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCompleteViewController.h; sourceTree = "<group>"; };
+		355F882718849CD70058BA53 /* AutoCompleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCompleteViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		355F87C7188495B50058BA53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355F882518849C4A0058BA53 /* libGuile.a in Frameworks */,
+				355F8821188497180058BA53 /* QuartzCore.framework in Frameworks */,
+				355F87D0188495B50058BA53 /* CoreGraphics.framework in Frameworks */,
+				355F87D2188495B50058BA53 /* UIKit.framework in Frameworks */,
+				355F87CE188495B50058BA53 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		355F87C1188495B50058BA53 = {
+			isa = PBXGroup;
+			children = (
+				355F87D3188495B50058BA53 /* Guile Demo */,
+				355F87CC188495B50058BA53 /* Frameworks */,
+				355F87CB188495B50058BA53 /* Products */,
+				355F8810188496520058BA53 /* Guile.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		355F87CB188495B50058BA53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				355F87CA188495B50058BA53 /* Guile Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		355F87CC188495B50058BA53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				355F8820188497180058BA53 /* QuartzCore.framework */,
+				355F87CD188495B50058BA53 /* Foundation.framework */,
+				355F87CF188495B50058BA53 /* CoreGraphics.framework */,
+				355F87D1188495B50058BA53 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		355F87D3188495B50058BA53 /* Guile Demo */ = {
+			isa = PBXGroup;
+			children = (
+				355F87DC188495B50058BA53 /* AppDelegate.h */,
+				355F87DD188495B50058BA53 /* AppDelegate.m */,
+				355F87DF188495B50058BA53 /* Main_iPhone.storyboard */,
+				355F87E2188495B50058BA53 /* Main_iPad.storyboard */,
+				355F881A188496B70058BA53 /* StatusBarMessagingViewController.h */,
+				355F881B188496B70058BA53 /* StatusBarMessagingViewController.m */,
+				355F882618849CD70058BA53 /* AutoCompleteViewController.h */,
+				355F882718849CD70058BA53 /* AutoCompleteViewController.m */,
+				355F87D4188495B50058BA53 /* Supporting Files */,
+			);
+			path = "Guile Demo";
+			sourceTree = "<group>";
+		};
+		355F87D4188495B50058BA53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				355F87D5188495B50058BA53 /* Guile Demo-Info.plist */,
+				355F87D6188495B50058BA53 /* InfoPlist.strings */,
+				355F87D9188495B50058BA53 /* main.m */,
+				355F87DB188495B50058BA53 /* Guile Demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		355F8811188496520058BA53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				355F8816188496520058BA53 /* libGuile.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		355F87C9188495B50058BA53 /* Guile Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 355F8802188495B50058BA53 /* Build configuration list for PBXNativeTarget "Guile Demo" */;
+			buildPhases = (
+				355F87C6188495B50058BA53 /* Sources */,
+				355F87C7188495B50058BA53 /* Frameworks */,
+				355F87C8188495B50058BA53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				355F881F188496FC0058BA53 /* PBXTargetDependency */,
+			);
+			name = "Guile Demo";
+			productName = "Guile Demo";
+			productReference = 355F87CA188495B50058BA53 /* Guile Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		355F87C2188495B50058BA53 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Gilt Groupe";
+			};
+			buildConfigurationList = 355F87C5188495B50058BA53 /* Build configuration list for PBXProject "Guile Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 355F87C1188495B50058BA53;
+			productRefGroup = 355F87CB188495B50058BA53 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 355F8811188496520058BA53 /* Products */;
+					ProjectRef = 355F8810188496520058BA53 /* Guile.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				355F87C9188495B50058BA53 /* Guile Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		355F8816188496520058BA53 /* libGuile.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGuile.a;
+			remoteRef = 355F8815188496520058BA53 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		355F87C8188495B50058BA53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355F87D8188495B50058BA53 /* InfoPlist.strings in Resources */,
+				355F88221884981E0058BA53 /* Main_iPhone.storyboard in Resources */,
+				355F8823188498200058BA53 /* Main_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		355F87C6188495B50058BA53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355F882818849CD70058BA53 /* AutoCompleteViewController.m in Sources */,
+				355F87DA188495B50058BA53 /* main.m in Sources */,
+				355F87DE188495B50058BA53 /* AppDelegate.m in Sources */,
+				355F881C188496B70058BA53 /* StatusBarMessagingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		355F881F188496FC0058BA53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Guile;
+			targetProxy = 355F881E188496FC0058BA53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		355F87D6188495B50058BA53 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355F87D7188495B50058BA53 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		355F87DF188495B50058BA53 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355F87E0188495B50058BA53 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		355F87E2188495B50058BA53 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355F87E3188495B50058BA53 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		355F8800188495B50058BA53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		355F8801188495B50058BA53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		355F8803188495B50058BA53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guile Demo/Guile Demo-Prefix.pch";
+				INFOPLIST_FILE = "Guile Demo/Guile Demo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		355F8804188495B50058BA53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guile Demo/Guile Demo-Prefix.pch";
+				INFOPLIST_FILE = "Guile Demo/Guile Demo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		355F87C5188495B50058BA53 /* Build configuration list for PBXProject "Guile Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355F8800188495B50058BA53 /* Debug */,
+				355F8801188495B50058BA53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		355F8802188495B50058BA53 /* Build configuration list for PBXNativeTarget "Guile Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355F8803188495B50058BA53 /* Debug */,
+				355F8804188495B50058BA53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 355F87C2188495B50058BA53 /* Project object */;
+}

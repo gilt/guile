@@ -2,15 +2,13 @@
 //  Guile.h
 //  Guile
 //
-//  Created by Adam Kaplan on 5/10/13.
-//  Copyright (c) 2013 Gilt Groupe. All rights reserved.
+//  Created by Adam Kaplan on 1/13/14.
+//  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
-#ifndef Guile_Guile_h
-#define Guile_Guile_h
+#import <Foundation/Foundation.h>
 
-#import "UIApplication+StatusMessage.h"
-#import "StatusMessageManager.h"
-#import "StatusMessageLabel.h"
-
-#endif
+#import <Guile/UIApplication+StatusMessage.h>
+#import <Guile/StatusMessageManager.h>
+#import <Guile/StatusMessageLabel.h>
+#import <Guile/AutoSuggestTextField.h>
