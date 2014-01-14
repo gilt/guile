@@ -12,3 +12,5 @@
 #import <Guile/StatusMessageManager.h>
 #import <Guile/StatusMessageLabel.h>
 #import <Guile/AutoSuggestTextField.h>
+#import <Guile/UITextField+AutoSuggestAdditions.h>
+#import <Guile/AutoSuggestDelegate.h>

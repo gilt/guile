@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AutoSuggestDelegate.h"
+#import <Guile/AutoSuggestDelegate.h>
 
 /**
  * This category mixes the -updateSuggestion: into a UITextField instance.

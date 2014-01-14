@@ -7,7 +7,7 @@
 //
 
 #import "AutoSuggestTextField.h"
-#import "UITextField+AutoSuggestAdditions.h"
+#import <Guile/UITextField+AutoSuggestAdditions.h>
 
 @implementation AutoSuggestTextField
 

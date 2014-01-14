@@ -22,7 +22,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "AutoSuggestDelegate.h"
+#import <Guile/AutoSuggestDelegate.h>
 
 @interface AutoSuggestTextField : UITextField
 

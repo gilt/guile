@@ -9,8 +9,8 @@
 #import "UIApplication+StatusMessage.h"
 
 #import <QuartzCore/QuartzCore.h>
-#import "StatusMessageManager.h"
-#import "LoadableCategory.h"
+#import <Guile/StatusMessageManager.h>
+#import <Guile/LoadableCategory.h>
 
 MAKE_CATEGORIES_LOADABLE(UIApplication_StatusMessage);
 

@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import "StatusMessageManager.h"
+#import <Guile/StatusMessageManager.h>
 
 #import <QuartzCore/QuartzCore.h>
-#import "StatusMessageLabel.h"
+#import <Guile/StatusMessageLabel.h>
 
 static const int AnimationDuration = 3.0;
 

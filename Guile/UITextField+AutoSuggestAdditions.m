@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
-#import "UITextField+AutoSuggestAdditions.h"
+#import <Guile/UITextField+AutoSuggestAdditions.h>
 
 static UIColor *DefaultSuggestedTextColor;
 

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import "StatusMessageLabel.h"
+#import <Guile/StatusMessageLabel.h>
 
 #import <QuartzCore/QuartzCore.h>
 
