@@ -30,6 +30,8 @@
 
 - (id<AutoSuggestTextFieldDelegate>) suggestionDelegate;
 
-- (void)updateSuggestion:(UITextField *)textField;
+- (void)updateSuggestion;
+
+- (void)updateSuggestion:(id<AutoSuggestTextFieldDelegate>)aSuggestionDelegate;
 
 @end

@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import <Guile/UIApplication+StatusMessage.h>
 #import <Guile/StatusMessageManager.h>
 #import <Guile/StatusMessageLabel.h>
 #import <Guile/AutoSuggestTextField.h>
-#import <Guile/UITextField+AutoSuggestAdditions.h>
 #import <Guile/AutoSuggestDelegate.h>
+
+/* Probably don't want to pull all of these in all the time.
+#import <Guile/UIApplication+StatusMessage.h>
+#import <Guile/UITextField+AutoSuggestAdditions.h>
+*/

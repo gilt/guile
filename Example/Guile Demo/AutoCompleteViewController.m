@@ -32,11 +32,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSLog(@"range is %@", NSStringFromRange(range));
-    return YES;
-}
-
 #pragma mark - AutoSuggestDelegate Methods
 
 - (NSDictionary *)suggestedTextAttributes {
