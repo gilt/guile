@@ -19,6 +19,7 @@
 		355F8823188498200058BA53 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355F87E2188495B50058BA53 /* Main_iPad.storyboard */; };
 		355F882518849C4A0058BA53 /* libGuile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 355F8816188496520058BA53 /* libGuile.a */; };
 		355F882818849CD70058BA53 /* AutoCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355F882718849CD70058BA53 /* AutoCompleteViewController.m */; };
+		35CF7C3F1886645200B4BFFF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35CF7C3E1886645200B4BFFF /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		355F8820188497180058BA53 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		355F882618849CD70058BA53 /* AutoCompleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCompleteViewController.h; sourceTree = "<group>"; };
 		355F882718849CD70058BA53 /* AutoCompleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCompleteViewController.m; sourceTree = "<group>"; };
+		35CF7C3E1886645200B4BFFF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		355F87D4188495B50058BA53 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				35CF7C3E1886645200B4BFFF /* Default-568h@2x.png */,
 				355F87D5188495B50058BA53 /* Guile Demo-Info.plist */,
 				355F87D6188495B50058BA53 /* InfoPlist.strings */,
 				355F87D9188495B50058BA53 /* main.m */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				355F87D8188495B50058BA53 /* InfoPlist.strings in Resources */,
+				35CF7C3F1886645200B4BFFF /* Default-568h@2x.png in Resources */,
 				355F88221884981E0058BA53 /* Main_iPhone.storyboard in Resources */,
 				355F8823188498200058BA53 /* Main_iPad.storyboard in Resources */,
 			);
@@ -344,7 +348,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Guile Demo/Guile Demo-Prefix.pch";
 				INFOPLIST_FILE = "Guile Demo/Guile Demo-Info.plist";
@@ -358,7 +361,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Guile Demo/Guile Demo-Prefix.pch";
 				INFOPLIST_FILE = "Guile Demo/Guile Demo-Info.plist";
