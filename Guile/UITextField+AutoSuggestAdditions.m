@@ -18,70 +18,103 @@ static NSString *SuggestedTextMarkerAttributeValue = @"SuggestedTextMarker";
 
 @implementation UITextField (AutoSuggestAdditions)
 
+// Override point for subclasses.
 - (id<AutoSuggestTextFieldDelegate>) suggestionDelegate {
     return nil;
 }
 
+// Uses the suggestionDelegate that is set.
 - (void)updateSuggestion {
-    [self updateSuggestion:[self suggestionDelegate]];
+    [self updateSuggestion:self.suggestionDelegate];
 }
 
+// Injection point to use any suggestion delegate.
 - (void)updateSuggestion:(id<AutoSuggestTextFieldDelegate>)aSuggestionDelegate {
-    // Set the default color, only once
-    static dispatch_once_t onceToken;
+    static dispatch_once_t onceToken; // Set the default color, only once
     dispatch_once(&onceToken, ^{ DefaultSuggestedTextColor = [UIColor grayColor]; });
 
+    // Save the caret position so that it can be restored at the end
+    UITextPosition *caretPosition = [[self selectedTextRange] start];
+
+    // Range of characters that are definitely not suggestions. i.e. left of caret
+    NSInteger caretOffset = [self offsetFromPosition:self.beginningOfDocument toPosition:caretPosition];
+    NSRange acceptedRange = NSMakeRange(0, caretOffset);
+
     // Locate any existing suggested text and delete it
-    __block NSString *userInput = self.text;
+    __block NSMutableAttributedString *userInput = [self.attributedText mutableCopy];
+
     [self.attributedText enumerateAttribute:SuggestedTextMarkerAttributeName
                                     inRange:NSMakeRange(0, self.text.length)
-                                    options:0
-                                 usingBlock:^(NSString *marker, NSRange range, BOOL *stop) {
+                                    options:NSEnumerationReverse
+                                 usingBlock:
+     ^(NSString *marker, NSRange range, BOOL *stop) {
 
-                                     if (marker && marker == SuggestedTextMarkerAttributeValue) {
-                                         userInput = [userInput stringByReplacingCharactersInRange:range
-                                                                                        withString:@""];
-                                     }
-                                 }];
+         if (marker && marker == SuggestedTextMarkerAttributeValue) {
 
-    // Get the suggested text for the clean input
-    NSString *suggestedText = [aSuggestionDelegate suggestedStringForInputString:userInput];
+             NSRange accepted = NSIntersectionRange(range, acceptedRange);
+             if (accepted.length != 0) {
+                 // unmark & revert to default formatting
+                 [userInput beginEditing];
+                 [userInput removeAttribute:SuggestedTextMarkerAttributeName range:accepted];
+                 [userInput setAttributes:self.defaultTextAttributes range:accepted];
+                 [userInput endEditing];
 
+                 // delete beyond caret
+                 NSUInteger nextLocation = NSMaxRange(accepted);
+                 NSRange nextRange = NSMakeRange(nextLocation, NSMaxRange(range) - nextLocation);
+                 [userInput deleteCharactersInRange:nextRange];
+             }
+             else {
+                 [userInput deleteCharactersInRange:range];
+             }
+         }
+     }];
+
+    // Get the suggested text for the sanitized input
+    NSString *suggestedText = [aSuggestionDelegate suggestedStringForInputString:userInput.string];
+
+    // Color the suggested text and add a proprietary marker to allow reliable
+    // detection of suggested text later.
     if (suggestedText) {
-        NSString *combined = [userInput stringByAppendingString:suggestedText];
+        NSDictionary *attributes = nil;
 
-        NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithString:combined];
-
-        NSRange attributeRange = NSMakeRange(userInput.length, suggestedText.length);
-
-        // Color the suggested text
         if ([aSuggestionDelegate respondsToSelector:@selector(suggestedTextAttributes)]) {
-            [attributed addAttributes:[aSuggestionDelegate suggestedTextAttributes]
-                                range:attributeRange];
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:SuggestedTextMarkerAttributeValue
+                                                                           forKey:SuggestedTextMarkerAttributeName];
+            [dict addEntriesFromDictionary:[aSuggestionDelegate suggestedTextAttributes]];
+            attributes = dict;
         }
         else if ([aSuggestionDelegate respondsToSelector:@selector(suggestedTextColor)]) {
-            [attributed addAttribute:NSForegroundColorAttributeName
-                               value:[aSuggestionDelegate suggestedTextColor]
-                               range:attributeRange];
+            attributes = @{NSForegroundColorAttributeName:  [aSuggestionDelegate suggestedTextColor],
+                           SuggestedTextMarkerAttributeName: SuggestedTextMarkerAttributeValue };
         }
 
-        // Add a special proprietary marker to recognize this text later.
-        // Note: The color is not a safe value becasue it can change or be changed.
-        [attributed addAttribute:SuggestedTextMarkerAttributeName
-                           value:SuggestedTextMarkerAttributeValue
-                           range:attributeRange];
-
-        [self setAttributedText:attributed];
-
-        // Move the caret back to the original location
-        UITextPosition *caretPosition = [self positionFromPosition:self.beginningOfDocument
-                                                            offset:userInput.length];
-
-        self.selectedTextRange = [self textRangeFromPosition:caretPosition
-                                                  toPosition:caretPosition];
-    } else {
-        self.text = userInput; // ensure no highlighted text remains
+        [userInput appendAttributedString:
+         [[NSAttributedString alloc] initWithString:suggestedText attributes:attributes]];
     }
+
+    self.attributedText = userInput;
+
+    // typingAttributes maintains the attributes to be applied to the next typed
+    // character. It automaically tracks the attributes of the last typed character.
+    // Prevent the suggested text attributes from be applied to manual input.
+    self.typingAttributes = self.defaultTextAttributes;
+
+    self.selectedTextRange = [self textRangeFromPosition:caretPosition
+                                              toPosition:caretPosition];
+}
+
+// This method removes all suggested text formatting, replacing it with the default
+- (void)acceptSuggestion {
+    NSMutableAttributedString * copy = [self.attributedText mutableCopy];
+    NSRange range = NSMakeRange(0, copy.length);
+
+    [copy beginEditing];
+    [copy setAttributes:self.defaultTextAttributes range:range];
+    [copy removeAttribute:SuggestedTextMarkerAttributeName range:range];
+    [copy endEditing];
+
+    self.attributedText = copy;
 }
 
 @end

@@ -35,7 +35,7 @@
 
 - (void)textFieldDidComplete:(id)sender {
     // accept any suggestion, remove highlight
-    self.attributedText = [[NSAttributedString alloc] initWithString:self.text];
+    [self acceptSuggestion];
 }
 
 @end

@@ -34,4 +34,9 @@
 
 - (void)updateSuggestion:(id<AutoSuggestTextFieldDelegate>)aSuggestionDelegate;
 
+// Accepts the suggestion, meaning that the text will no longer be decorated
+// differently. Replaces attributes on the attributed suggestion text by with
+// the formatting from the character prior to the suggestion.
+- (void)acceptSuggestion;
+
 @end
