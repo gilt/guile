@@ -28,14 +28,12 @@
     // This step is required, or else you will need to call
     // updateSuggestion manually as needed.
     [self addTarget:self action:@selector(updateSuggestion) forControlEvents:UIControlEventEditingChanged];
-
-    // This step changes the suggestion into basic text (optional)
-    [self addTarget:self action:@selector(textFieldDidComplete:) forControlEvents:(UIControlEventEditingDidEnd | UIControlEventEditingDidEndOnExit)];
 }
 
-- (void)textFieldDidComplete:(id)sender {
+- (BOOL)resignFirstResponder {
     // accept any suggestion, remove highlight
     [self acceptSuggestion];
+    return [super resignFirstResponder];
 }
 
 @end
