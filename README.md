@@ -37,6 +37,16 @@ A few Apple frameworks are needed to use Guile. They're probably already part of
 - UIKit
 - QuartzCore
 
+## Building The Framework
+
+### Combined iOS Device / Simulator Framework
+
+To build Guile as a universal framework, you must ensure that the aggregate "Framework" build scheme is selected. Then simply use Command+B. To find the resulting Guile.framework: in the project navigator, right-click on libGuile.a under Products and select "Show In Finder".
+
+### Seperate iOS Device / Simulator Frameworks
+
+You might want to reduce the size of the distributed library by only including minimum architectures for an iOS device. In this case, you'll need to build Guile twice: once targetting a simulator and again tagetting iOS Device. When building for iOS Device, open the project's Build Settings for Guile (the library) and set **Build Active Architecture Only** to true. Add both framework version to your app's project, then link one debug and another to your distribution target. (Honestly this is overkill; most folks would be better off compiling Guile in as a submodule)
+
 ## Follow Us
 
 Check out the [Gilt Tech Blog](http://tech.gilt.com) to see what we're up to. Have questions? email us at mobile at gilt.com.
