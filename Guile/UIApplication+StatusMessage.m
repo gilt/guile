@@ -12,7 +12,7 @@
 #import <Guile/StatusMessageManager.h>
 #import <Guile/LoadableCategory.h>
 
-MAKE_CATEGORIES_LOADABLE(UIApplication_StatusMessage);
+MAKE_CATEGORIES_LOADABLE(UIApplication_StatusMessage_Loader);
 
 @implementation UIApplication (StatusMessage)
 

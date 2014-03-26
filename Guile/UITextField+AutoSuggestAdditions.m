@@ -7,14 +7,17 @@
 //
 
 #import <Guile/UITextField+AutoSuggestAdditions.h>
+#import <Guile/LoadableCategory.h>
+
+MAKE_CATEGORIES_LOADABLE(UITextField_AutoSuggestAdditions_Loader)
+
+#define RANGE_NOT_FOUND NSMakeRange(NSNotFound, 0)
 
 static UIColor *DefaultSuggestedTextColor;
 
 static NSString *SuggestedTextMarkerAttributeName = @"SuggestedTextMarkerAttribute";
 
 static NSString *SuggestedTextMarkerAttributeValue = @"SuggestedTextMarker";
-
-#define RANGE_NOT_FOUND NSMakeRange(NSNotFound, 0)
 
 @implementation UITextField (AutoSuggestAdditions)
 
