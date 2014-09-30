@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   }
   s.platform            = :ios, "7.0"
   s.source_files        = "Guile"
-  s.frameworks          = "QuartzCore ", "Foundation", "UIKit"
+  s.frameworks          = "QuartzCore", "Foundation", "UIKit"
   s.requires_arc        = true
 end
