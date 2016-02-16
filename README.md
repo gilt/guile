@@ -23,8 +23,8 @@ A demo app project is embedded in the Guile framework project. It runs in the iO
 
 There are three primary methods of using Guile in your project
 
-1. Download Guile.framework, then drag it into your XCode project
-2. Clone guile and include it as a sub-project of your XCode project
+1. Download Guile.framework, then drag it into your Xcode project
+2. Clone guile and include it as a sub-project of your Xcode project
 3. Using CocoaPods (a sample Podfile is in GuileDemo)
 
 I recommend option #1.
